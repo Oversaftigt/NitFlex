@@ -1,4 +1,4 @@
-﻿namespace RentalService.Models
+﻿namespace RentalMicroservice.Models
 {
     public class RentalItem
     {

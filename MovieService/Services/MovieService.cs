@@ -1,27 +1,35 @@
-﻿using MovieService.Models;
+﻿using MovieMicroservice.Models;
+using MovieMicroservice.Repositories;
 
-namespace MovieService.Services
+namespace MovieMicroservice.Services
 {
     public class MovieService : IMovieService
     {
+        private readonly IMovieRepository _movieRepository;
+
+        public MovieService(IMovieRepository repository)
+        {
+            this._movieRepository = repository;
+        }
+
         void IMovieService.CreateMovie(CreateMovieItem createMovieItem)
         {
-            throw new NotImplementedException();
+            _movieRepository.CreateMovie(createMovieItem);
         }
 
         void IMovieService.EditMovie(EditMovieItem editMovieItem)
         {
-            throw new NotImplementedException();
+            _movieRepository.EditMovie(editMovieItem);
         }
 
         void IMovieService.DeleteMovie(DeleteMovieItem deleteMovieItem)
         {
-            throw new NotImplementedException();
+            _movieRepository.DeleteMovie(deleteMovieItem);
         }
 
         List<MovieItem> IMovieService.GetAllMovies()
         {
-            throw new NotImplementedException();
+            return _movieRepository.GetAllMovies();
         }
     }
 }

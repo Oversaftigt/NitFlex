@@ -1,4 +1,4 @@
-namespace RentalService
+namespace RentalMicroservice
 {
     public class WeatherForecast
     {

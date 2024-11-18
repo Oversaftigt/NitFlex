@@ -1,4 +1,4 @@
-namespace MovieMicroservice
+namespace IdentityMicroservice
 {
     public class WeatherForecast
     {

@@ -1,6 +1,6 @@
-﻿using RentalService.Models;
+﻿using RentalMicroservice.Models;
 
-namespace RentalService.Repositories
+namespace RentalMicroservice.Repositories
 {
     public interface IRentalRepository
     {

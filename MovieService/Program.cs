@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using MovieService.Data;
+using MovieMicroservice.Data;
+using MovieMicroservice.Repositories;
+using MovieMicroservice.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +17,10 @@ builder.Services.AddSwaggerGen();
 //EF
 builder.Services.AddDbContext<MovieDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("AzureSql")));
+
+//Dependency injection
+builder.Services.AddScoped<IMovieRepository, MovieRepository>();
+builder.Services.AddScoped<IMovieService,MovieService>();
 
 var app = builder.Build();
 

@@ -1,6 +1,6 @@
-﻿using RentalService.Models;
+﻿using RentalMicroservice.Models;
 
-namespace RentalService.Services
+namespace RentalMicroservice.Services
 {
     public class RentalService: IRentalService
     {

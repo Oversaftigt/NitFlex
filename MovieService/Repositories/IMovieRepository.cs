@@ -1,6 +1,6 @@
-﻿using MovieService.Models;
+﻿using MovieMicroservice.Models;
 
-namespace MovieService.Repositories
+namespace MovieMicroservice.Repositories
 {
     public interface IMovieRepository
     {

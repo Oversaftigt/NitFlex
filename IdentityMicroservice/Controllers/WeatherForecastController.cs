@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace RentalMicroservice.Controllers
+namespace IdentityMicroservice.Controllers
 {
     [ApiController]
     [Route("[controller]")]

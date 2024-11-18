@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MovieService.Models;
+using MovieMicroservice.Models;
 
-namespace MovieService.Data
+namespace MovieMicroservice.Data
 {
     public class MovieDbContext : DbContext
     {

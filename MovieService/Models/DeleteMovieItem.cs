@@ -1,4 +1,4 @@
-﻿namespace MovieService.Models
+﻿namespace MovieMicroservice.Models
 {
     public class DeleteMovieItem
     {

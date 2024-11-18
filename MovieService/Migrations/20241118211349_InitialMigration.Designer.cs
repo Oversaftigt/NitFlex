@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using MovieService.Data;
+using MovieMicroservice.Data;
 
 #nullable disable
 
-namespace MovieService.Migrations
+namespace MovieMicroservice.Migrations
 {
     [DbContext(typeof(MovieDbContext))]
     [Migration("20241118211349_InitialMigration")]

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace MovieService.Controllers
+namespace MovieMicroservice.Controllers
 {
     [ApiController]
     [Route("[controller]")]
