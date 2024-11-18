@@ -1,11 +1,20 @@
+using Microsoft.EntityFrameworkCore;
+using MovieService.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddDapr();
+builder.Services.AddDaprClient();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+//EF
+builder.Services.AddDbContext<MovieDbContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("AzureSql")));
 
 var app = builder.Build();
 
@@ -21,5 +30,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+app.MapSubscribeHandler();
+app.UseCloudEvents();
 
 app.Run();
